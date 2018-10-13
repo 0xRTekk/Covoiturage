@@ -11,7 +11,7 @@
     float: left;
 }
 
-.NavBarLi .NavBarA {
+.NavBarA {
     display: block;
     color: white;
     text-align: center;
@@ -19,7 +19,7 @@
     text-decoration: none;
 }
 
-.NavBarLi .NavBarA:hover:not(.NavBarButtonActive) {
+.NavBarALeft:hover:not(.NavBarButtonActive) {
     background-color: #111;
 }
 
@@ -27,7 +27,11 @@
     background-color: #4CAF50;
 }
 
+
 .NavBarLiRight {
     float: right;
     background-color: #00CED1;
+}
+.NavBarARight:hover {
+  background-color: #0099d1;
 }
