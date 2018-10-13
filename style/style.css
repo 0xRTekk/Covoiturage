@@ -26,3 +26,8 @@
 .NavBarButtonActive {
     background-color: #4CAF50;
 }
+
+.NavBarLiRight {
+    float: right;
+    background-color: #00CED1;
+}
