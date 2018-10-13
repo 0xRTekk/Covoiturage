@@ -1,0 +1,28 @@
+/*NAVBAR*/
+.NavBar{
+  list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+}
+
+.NavBarLi{
+    float: left;
+}
+
+.NavBarLi .NavBarA {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.NavBarLi .NavBarA:hover:not(.NavBarButtonActive) {
+    background-color: #111;
+}
+
+.NavBarButtonActive {
+    background-color: #4CAF50;
+}
