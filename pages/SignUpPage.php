@@ -15,13 +15,13 @@ include ('../include/navbar.php');// Include the navbar
 
       <span class="radio">
         <label>
-          <input type="radio" name="SignUpType" value="Conducteur" checked>Conducteur
+          <input type="radio" name="SignUpType" value="conducteur" checked>Conducteur
         </label>
       </span>
       &nbsp;
       <span class="radio">
         <label>
-          <input type="radio" name="SignUpType" value="Passager">Passager
+          <input type="radio" name="SignUpType" value="passager">Passager
         </label>
       </span>
 
@@ -62,11 +62,11 @@ include ('../include/navbar.php');// Include the navbar
       <span class="radio">
         Fumeur:&nbsp;&nbsp;&nbsp;
         <label>
-          <input type="radio" name="SignUpSmoking" value="Yes" checked>Oui
+          <input type="radio" name="SignUpSmoking" value="1" checked>Oui
         </label>
         &nbsp;
         <label>
-          <input type="radio" name="SignUpSmoking" value="No">Non
+          <input type="radio" name="SignUpSmoking" value="0">Non
         </label>
       </span>
 
@@ -84,13 +84,13 @@ include ('../include/navbar.php');// Include the navbar
 
     <span class="radio">
       <label>
-        <input type="radio" name="SignUpGender" value="Homme" checked>Homme
+        <input type="radio" name="SignUpGender" value="h" checked>Homme
       </label>
     </span>
     &nbsp;
     <span class="radio">
       <label>
-        <input type="radio" name="SignUpGender" value="Femme">Femme
+        <input type="radio" name="SignUpGender" value="f">Femme
       </label>
     </span>
 
@@ -157,19 +157,19 @@ include ('../include/navbar.php');// Include the navbar
     <span class="radio">
       Confort:&nbsp;&nbsp;&nbsp;
       <label>
-        <input type="radio" name="SignUpComfort" value="Basique" checked>Basique
+        <input type="radio" name="SignUpComfort" value="basique" checked>Basique
       </label>
       &nbsp;
       <label>
-        <input type="radio" name="SignUpComfort" value="Normal">Normal
+        <input type="radio" name="SignUpComfort" value="normal">Normal
       </label>
       &nbsp;
       <label>
-        <input type="radio" name="SignUpComfort" value="Comfortable">Comfortable
+        <input type="radio" name="SignUpComfort" value="comfortable">Comfortable
       </label>
       &nbsp;
       <label>
-        <input type="radio" name="SignUpComfort" value="Luxe">Luxe
+        <input type="radio" name="SignUpComfort" value="luxe">Luxe
       </label>
     </span>
 
