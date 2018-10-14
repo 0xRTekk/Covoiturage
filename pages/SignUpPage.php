@@ -3,9 +3,12 @@ $title = 'Home';
 $currentpage = "home.php";
 include ('../include/navbar.php');// Include the navbar
 ?>
-
+<div class="row">
+  <h4>Inscription</h4>
+</div>
+<br>
 <form action="../backend/SignUp.php" method="post">
-  <div class="card-2">
+  <div class="card-2 container-fluid">
     <span class="row"><h5>Profil:</h5></span>
 
     <div class="row">
@@ -132,7 +135,7 @@ include ('../include/navbar.php');// Include the navbar
 </div>
 
   <br><br>
-<div class="card-2">
+<div class="card-2" id="SigUpCardVehicule">
 
   <div class="row">
     <h5>Voiture:</h5>
@@ -181,5 +184,5 @@ include ('../include/navbar.php');// Include the navbar
 </form>
 
 <?php
-include ('../include/footer.php');//permet d'inclure la navbar et le <head> en une ligne
+include ('../include/footer.php');
 ?>

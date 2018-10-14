@@ -18,7 +18,20 @@ jQuery(document).ready(function ($) {
   };
 
 
-  
+  /*SIGNUP FORM*/
+
+    /*Card vehicule*/
+    $('input[type=radio][name=SignUpType]').change(function() {
+      if (this.value == 'Conducteur') {
+        $('#SigUpCardVehicule').show();
+      }
+      else if (this.value == 'Passager') {
+        $('#SigUpCardVehicule').hide();
+      }
+    });
+
+
+
 
 
 
