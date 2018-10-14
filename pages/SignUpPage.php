@@ -5,21 +5,76 @@ include ('../include/navbar.php');// Include the navbar
 ?>
 
 <form action="../backend/SignUp.php" method="post">
+  <div class="card-2">
+    <span class="row"><h5>Profil:</h5></span>
+
+    <div class="row">
+
+      <span class="radio">
+        <label>
+          <input type="radio" name="SignUpType" value="Conducteur" checked>Conducteur
+        </label>
+      </span>
+      &nbsp;
+      <span class="radio">
+        <label>
+          <input type="radio" name="SignUpType" value="Passager">Passager
+        </label>
+      </span>
+
+    </div>
+
+    <br>
+
+    <div class="row">
+
+      <span class="col">
+        <input type="text" class="form-control" placeholder="Pseudo" name="SignUpUsername" required> <br>
+      </span>
+
+      <span class="col">
+        <button type="button" class="btn btn-primary">Photo de profil</button>
+      </span>
+
+    </div>
+
+    <br>
+
+    <div class="row">
+      Votre mot de passe doit contenir au minimum 8 caractères dont au moins un chiffre:
+    </div>
+    <br>
+    <div class="row">
+      <span class="col">
+        <input type="password" class="form-control" placeholder="Mot de passe" name="SignUpPassword" required>
+      </span>
+      <span class="col">
+        <input type="password" class="form-control" placeholder="Confirmation Mot de passe" name="SignUpPasswordConfirmation" required>
+      </span>
+
+    </div>
+
+    <div class="row">
+
+      <span class="radio">
+        Fumeur:&nbsp;&nbsp;&nbsp;
+        <label>
+          <input type="radio" name="SignUpSmoking" value="Yes" checked>Oui
+        </label>
+        &nbsp;
+        <label>
+          <input type="radio" name="SignUpSmoking" value="No">Non
+        </label>
+      </span>
+
+    </div>
+  </div>
+
+<br><br>
+<div class="card-2">
 
   <div class="row">
-
-    <span class="radio">
-      <label>
-        <input type="radio" name="SignUpType" value="Conducteur" checked>Conducteur
-      </label>
-    </span>
-    &nbsp;
-    <span class="radio">
-      <label>
-        <input type="radio" name="SignUpType" value="Passager">Passager
-      </label>
-    </span>
-
+    <h5>Informations personnelles:</h5>
   </div>
 
   <div class="row">
@@ -74,62 +129,54 @@ include ('../include/navbar.php');// Include the navbar
 
   </div>
 
+</div>
+
   <br><br>
+<div class="card-2">
 
   <div class="row">
-    Votre mot de passe doit contenir au minimum 8 caractères dont au moins un chiffre:
+    <h5>Voiture:</h5>
   </div>
   <br>
   <div class="row">
+
     <span class="col">
-      <input type="password" class="form-control" placeholder="Mot de passe" name="SignUpPassword" required>
+      <input type="text" class="form-control" placeholder="Véhicule" name="SignUpCar">
     </span>
     <span class="col">
-      <input type="password" class="form-control" placeholder="Confirmation Mot de passe" name="SignUpPasswordConfirmation" required>
+      <input type="text" class="form-control" placeholder="Moteur" name="SignUpMotor">
     </span>
 
   </div>
 
-  <br>
-
-
-<div class="row">
-    <span class="col">
-      <input type="text" class="form-control" placeholder="Pseudo" name="SignUpUsername" required> <br>
+  <div class="row">
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="radio">
+      Confort:&nbsp;&nbsp;&nbsp;
+      <label>
+        <input type="radio" name="SignUpComfort" value="Basique" checked>Basique
+      </label>
+      &nbsp;
+      <label>
+        <input type="radio" name="SignUpComfort" value="Normal">Normal
+      </label>
+      &nbsp;
+      <label>
+        <input type="radio" name="SignUpComfort" value="Comfortable">Comfortable
+      </label>
+      &nbsp;
+      <label>
+        <input type="radio" name="SignUpComfort" value="Luxe">Luxe
+      </label>
     </span>
-    <span class="col">
-      <button type="button" class="btn btn-primary">Photo de profil</button>
-    </span>
-</div>
 
-<div class="row">
-
-  <span class="radio">
-    Fumeur:&nbsp;&nbsp;&nbsp;
-    <label>
-      <input type="radio" name="SignUpSmoking" value="Yes" checked>Oui
-    </label>
-  &nbsp;
-    <label>
-      <input type="radio" name="SignUpSmoking" value="No">Non
-    </label>
-  </span>
+  </div>
 
 </div>
 
-<br>
-
-
-<div class="row">
-
-  <span class="col">
-    <input type="text" class="form-control" placeholder="Véhicule" name="SignUpCar">
-  </span>
-
-</div>
 
   <div class="modal-footer">
-    <input type="submit" type="button" class="btn btn-primary" name="SignUpButton"  value="Send">
+    <input type="submit" type="button" class="btn btn-primary" name="SignUpButton"  value="S'inscrire">
   </div>
 </form>
 
