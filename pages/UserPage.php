@@ -1,5 +1,5 @@
 <?php
-$title = 'User Page';
+$title = 'Utilisateur';
 $currentpage = "UserPage.php";
 include ('../include/navbar.php');// Include the navbar
 ?>

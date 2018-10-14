@@ -10,7 +10,7 @@ if (isset($_POST["SignInButton"]) && empty($_SESSION['user'])) {//IF click on co
     $password = $_POST["SignInPassword"];
     $currentpage = $_POST["Currentpage"];
 
-    $req = "select * from users where username = '$username' and password='$password'"; //Verrify if the user and password are true
+    $req = "select * from membres where mel = '$username' and pass ='$password'"; //Verrify if the user and password are true
 
     $resultat = mysqli_query($con, $req); //result of the request
     $lig = mysqli_fetch_assoc($resultat); //result line by line
@@ -19,7 +19,6 @@ if (isset($_POST["SignInButton"]) && empty($_SESSION['user'])) {//IF click on co
     if (mysqli_num_rows($resultat) > 0) {//If a result is found
 
         $_SESSION["user"] = $username;
-        $_SESSION["userID"] = $lig["user_id"];
 
         header( "Location: ../pages/$currentpage" );
     }else {

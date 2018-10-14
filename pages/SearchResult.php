@@ -1,6 +1,6 @@
 <?php
-$title = 'Home';
-$currentpage = "home.php";
+$title = 'Recherche';
+$currentpage = "SearchResult.php";
 include ('../include/navbar.php');// Include the navbar
 ?>
 

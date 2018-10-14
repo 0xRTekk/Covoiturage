@@ -3,7 +3,7 @@
 
         <?php
         include '../Database/ConnectDatabase.php';
-          $_SESSION['WebsiteName'] = 'Template';
+          $_SESSION['WebsiteName'] = 'Covoit';
          ?>
 
         <!-- Disconnect -->
@@ -17,7 +17,7 @@
         ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -28,6 +28,7 @@
 
     <!-- Material Design for Bootstrap CSS -->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
 
     <link rel="stylesheet" href="../style/style.css">
 
@@ -80,14 +81,12 @@ else {echo $_SESSION['WebsiteName'];} ?></title>
                   <div class="nav-item navbar-marge-button">
                       <!-- Sign in Button trigger modal -->
                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#SigninModal">
-                          Sign In
+                          Connexion
                       </button>
                   </div>
                   <div class="nav-item  active navbar-marge-button">
-                      <!-- Sign up Button trigger modal -->
-                      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#SignupModal">
-                          Sign Up
-                      </button>
+                      <!-- Sign up Button -->
+                      <a class="btn btn-secondary" href="./SignUpPage.php">Inscription</a>
                   </div>
 
 
@@ -103,47 +102,21 @@ else {echo $_SESSION['WebsiteName'];} ?></title>
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="SignupModalLabel">Sign In</h5>
+                        <h5 class="modal-title" id="SignupModalLabel">Connexion</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
                       <form action="../backend/SignIn.php" method="post">
-                        <input type="text" class="form-control" placeholder="Username" name="SignInUsername" required> <br>
-                        <input type="password" class="form-control" placeholder="Password" name="SignInPassword" required>
+                        <input type="text" class="form-control" placeholder="E-mail" name="SignInUsername" required> <br>
+                        <input type="password" class="form-control" placeholder="Mot de passe" name="SignInPassword" required>
                          <input type="hidden" name="Currentpage" value="<?php echo $currentpage;?>">
                         <div class="modal-footer">
-                          <input type="submit" type="button" class="btn btn-primary" name="SignInButton"  value="Connect">
+                          <input type="submit" type="button" class="btn btn-primary" name="SignInButton"  value="Se connecter">
                         </div>
                       </form>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sign up Modal -->
-        <div class="modal fade" id="SignupModal" tabindex="-1" role="dialog" aria-labelledby="SignupModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="SignupModalLabel">Sign Up</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                      <form action="../backend/SignUp.php" method="post">
-                        <input type="text" class="form-control" placeholder="Username" name="SignUpUsername" required> <br>
-                        <input type="email" class="form-control" placeholder="Email" name="SignUpEmail" required> <br>
-                        <input type="password" class="form-control" placeholder="Password" name="SignUpPassword" required> <br>
-                        <input type="password" class="form-control" placeholder="Confirm Password" name="password_confirmation" required> <br>
-                        <input type="hidden" name="Currentpage" value="<?php echo $currentpage;?>">
-                        <div class="modal-footer">
-                          <input type="submit" type="button" class="btn btn-primary" name="SignUpButton"  value="Send">
-                        </div>
-                      </form>
                     </div>
                 </div>
             </div>

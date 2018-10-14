@@ -1,6 +1,6 @@
 <?php
-$title = 'Home';
-$currentpage = "home.php";
+$title = 'Déposer un annonce';
+$currentpage = "JourneyForm.php";
 include ('../include/navbar.php');// Include the navbar
 ?>
 
