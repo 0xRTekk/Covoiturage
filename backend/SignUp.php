@@ -43,11 +43,7 @@ if (isset($_POST["SignUpButton"])) {
     $resultat = mysqli_query($con, $req);
   }
 
-
-
-
-  echo $req;
-//  header( "Location: ../pages/home.php" );
+  header( "Location: ../pages/home.php" );
 }
 
 ?>

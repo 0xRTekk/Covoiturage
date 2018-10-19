@@ -18,17 +18,47 @@ jQuery(document).ready(function ($) {
   };
 
 
-  /*SIGNUP FORM*/
 
+  /*SIGNUP FORM*/
     /*Card vehicule*/
     $('input[type=radio][name=SignUpType]').change(function() {
-      if (this.value == 'Conducteur') {
+      if (this.value == 'conducteur') {
         $('#SigUpCardVehicule').show();
       }
-      else if (this.value == 'Passager') {
+      else if (this.value == 'passager') {
         $('#SigUpCardVehicule').hide();
       }
     });
+
+    /*Password strenght*/
+    $('#SignUpPasswordInput').on('input',function(){//on input value change
+
+    if(this.value.length < 8){//if the value length is less than 8 character
+      $('#PaswordBoxLength').show();
+    }else {
+      $('#PaswordBoxLength').hide();
+    }
+
+    if(this.value.match(/\d+/g) == null){//if there no number in the password
+      $('#PaswordBoxNumber').show();
+    }else {
+      $('#PaswordBoxNumber').hide();
+    }
+
+    if (this.value.length < 8 || this.value.match(/\d+/g) == null) {//if the password have more than 8 character and 1 number
+      $('#PaswordBoxInfo').show();
+    }else {
+      $('#PaswordBoxInfo').hide();
+    }
+
+    if(this.value.length != $('#SignUpPasswordConfirmation').value){
+      $('#SignUpPasswordConfirmation').html('mismatch');
+      $('#SignUpPasswordConfirmation').setCustomValidity('Les mot de passes sont diferents');
+    }
+
+});
+
+
 
 
 

@@ -27,7 +27,7 @@
 /*Text Message*/
 .ErrorMessage{
 
-  font-size: 150%;
+  /*font-size: 150%;*/
   color: red;
 
 }
@@ -58,3 +58,19 @@ font-weight: bold;
 
 
 /*PAGE*/
+
+      /*Sign up page*/
+      #PaswordBoxInfo{/*The popup wich give the caracteristic of a good password*/
+        position: absolute;
+        display: none;
+        padding: 1%;
+        margin-top: 3px;
+        z-index: 2;
+        background-color: white;
+      }
+      #PaswordBoxLength{/*Password strenght info on length*/
+        display: none;
+      }
+      #PaswordBoxNumber{/*Password strenght info on number*/
+        display: none;
+      }
