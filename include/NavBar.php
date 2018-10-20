@@ -48,9 +48,11 @@ else {echo $_SESSION['WebsiteName'];} ?></title>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
+
         <li class="nav-item active">
-          <a class="nav-link" href="../pages/Page.php"> Page <span class="sr-only">Page</span></a>
+          <a class="nav-link" href="../pages/JourneyCard.php"> Page <span class="sr-only">Page</span></a>
         </li>
+
       </ul>
       <form class="form-inline my-2 my-lg-0">
 
