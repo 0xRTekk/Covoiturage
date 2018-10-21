@@ -71,6 +71,15 @@ jQuery(document).ready(function ($) {
 
     });
 
+    $( ".datepicker" ).datepicker({
+        maxViewMode: 2,
+        language: "fr",
+        orientation: "bottom auto",
+        todayHighlight: true
+    });
+
+
+
 
 
 

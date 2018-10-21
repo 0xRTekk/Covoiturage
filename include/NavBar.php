@@ -52,6 +52,34 @@ else {echo $_SESSION['WebsiteName'];} ?></title>
         <li class="nav-item active">
           <a class="nav-link" href="../pages/JourneyCard.php"> Page <span class="sr-only">Page</span></a>
         </li>
+        <li class="nav-item active">
+
+          <input type="text" class="form-control" placeholder="Départ">
+        </li>
+        <li class="nav-item active">
+          <input type="text" class="form-control" placeholder="Arrivée">
+        </li>
+        <li class="nav-item active">
+          <input type="text" class="form-control" class="datepicker">
+        </li>
+        <li class="nav-item active">
+          <div class="input-group-append">
+            <button class="btn btn-circle" type="button">
+              <svg class="IconStyle" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
+                <path d="M0 0v2h7v-2h-7zm0 3v4.91c0 .05.04.09.09.09h6.81c.05 0 .09-.04.09-.09v-4.91h-7zm1 1h1v1h-1v-1zm2 0h1v1h-1v-1zm2 0h1v1h-1v-1zm-4 2h1v1h-1v-1zm2 0h1v1h-1v-1z" />
+              </svg>
+            </button>
+          </div>
+        </li>
+
+        <li class="nav-item active">
+          <button class="btn btn-circle" id="SearchButton">
+              <svg class="IconStyle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8">
+                <path d="M3.5 0c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5c.59 0 1.17-.14 1.66-.41a1 1 0 0 0 .13.13l1 1a1.02 1.02 0 1 0 1.44-1.44l-1-1a1 1 0 0 0-.16-.13c.27-.49.44-1.06.44-1.66 0-1.93-1.57-3.5-3.5-3.5zm0 1c1.39 0 2.5 1.11 2.5 2.5 0 .66-.24 1.27-.66 1.72-.01.01-.02.02-.03.03a1 1 0 0 0-.13.13c-.44.4-1.04.63-1.69.63-1.39 0-2.5-1.11-2.5-2.5s1.11-2.5 2.5-2.5z"/>
+              </svg>
+          </button>
+        </li>
+
 
       </ul>
       <form class="form-inline my-2 my-lg-0">
