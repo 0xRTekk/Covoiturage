@@ -59,6 +59,18 @@ jQuery(document).ready(function ($) {
 });
 
 
+/*City name search function Elasticsearch*/
+
+    $("CityName").each(function(){
+      //do ajax query to elastic search
+      this.id.slice(8);
+
+
+      //load th result in this div
+      this.load();
+
+    });
+
 
 
 

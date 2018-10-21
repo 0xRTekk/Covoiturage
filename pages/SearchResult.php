@@ -12,12 +12,7 @@ include ('../Database/ConnectDatabase.php');
     $SearchArriveeID = $_GET['arrivee'];
     $SearchDate = $_GET['date'];
 
-    $SearchResult = "SELECT * "
-
-
-
-
-
+    $SearchResult = "SELECT * FROM trajet WHERE depart_ville = $SearchDepartID AND arrivee_ville = $SearchArriveeID AND $SearchDate BETWEEN date_debut_periode AND date_fin_periode";
 
   }
 
