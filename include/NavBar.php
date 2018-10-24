@@ -53,11 +53,13 @@ else {echo $_SESSION['WebsiteName'];} ?></title>
           <a class="nav-link" href="../pages/JourneyCard.php"> Page <span class="sr-only">Page</span></a>
         </li>
         <li class="nav-item active">
-
-          <input type="text" class="form-control" placeholder="Départ">
+          <input type="text" class="form-control SearchTownInput" placeholder="Départ" id="SearchTownInputDepart">
+          <div  class="SearchTownDrop" id="SearchTownDropDepart">
+          </div>
         </li>
+
         <li class="nav-item active">
-          <input type="text" class="form-control" placeholder="Arrivée">
+          <input type="text" class="form-control SearchTownInput" placeholder="Arrivée">
         </li>
         <li class="nav-item active">
           <input type="text" class="form-control" class="datepicker">
