@@ -90,11 +90,12 @@ jQuery(document).ready(function ($) {
 
     if ($(".SearchTownInput#" + this.id).val().length > 2) {
 
+
       var data = {
         "query": {
           "match" : {
             "nom" : {
-              "query" : $(".SearchTownInput").val(),
+              "query" : $(".SearchTownInput#" + this.id).val(),
               "fuzziness": "AUTO"
             }
           }
@@ -111,12 +112,13 @@ jQuery(document).ready(function ($) {
         contentType: 'application/json',
       })
       .done(function( data ) {
+
         $('.SearchTownDrop#SearchTownDrop' + InputId).empty();//reset the search drop
 
 
         $(data.hits.hits).each( function() {
 
-          $('.SearchTownDrop#SearchTownDrop' + InputId).append('<span id=" ' + this._source.id + ' " class="SearchProposition">' + this._source.nom + '</span>');
+          $('.SearchTownDrop#SearchTownDrop' + InputId).append('<span id="SearchProposition' + InputId + '" class="SearchProposition">' + this._source.nom + '</span>');
 
         });
 
@@ -150,11 +152,18 @@ jQuery(document).ready(function ($) {
   });
 
 
-
 });
 
+$('.SearchTownDrop').on('click','.SearchProposition', function() {
 
+  var InputId = this.id.slice(17);
 
+  $(".SearchTownInput#SearchTownInput" + InputId).val( $(this).text().trim() );
+
+  $('.SearchTownDrop#SearchTownDrop' + InputId).hide("fast");
+  $('.SearchTownDrop#SearchTownDrop' + InputId).empty();
+
+});
 
 
 

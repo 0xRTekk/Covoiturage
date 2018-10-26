@@ -57,9 +57,10 @@ else {echo $_SESSION['WebsiteName'];} ?></title>
           <div  class="SearchTownDrop" id="SearchTownDropDepart">
           </div>
         </li>
-
         <li class="nav-item active">
-          <input type="text" class="form-control SearchTownInput" placeholder="Arrivée">
+          <input type="text" class="form-control SearchTownInput" placeholder="Arrivée" id="SearchTownInputArrivee">
+          <div  class="SearchTownDrop" id="SearchTownDropArrivee">
+          </div>
         </li>
         <li class="nav-item active">
           <input type="text" class="form-control" class="datepicker">
