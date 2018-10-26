@@ -165,6 +165,17 @@ $('.SearchTownDrop').on('click','.SearchProposition', function() {
 
 });
 
+$('.SearchTownInput').on('focusout',function(e){
+
+  if($('.SearchProposition' + ':hover').length) {
+        return;
+  }
+  
+ $('.SearchTownDrop#SearchTownDrop' + this.id.slice(15)).hide("fast");
+
+
+});
+
 
 
 
