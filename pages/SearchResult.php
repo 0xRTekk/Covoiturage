@@ -15,7 +15,6 @@ include ('../Database/ConnectDatabase.php');
     $SearchResult = "SELECT * FROM trajet WHERE depart_ville = $SearchDepartID AND arrivee_ville = $SearchArriveeID AND $SearchDate BETWEEN date_debut_periode AND date_fin_periode";
 
   }
-
 ?>
 <div class="py-2 col-md-6 col-lg-4 col-xl-3">
   <div class="card">

@@ -82,7 +82,7 @@ jQuery(document).ready(function ($) {
   });
 
 
-  /*Search input for map*/
+  /*Search input for town search*/
   $('.SearchTownInput').on('input',function(e){
 
     /*Get the id at the end of the input #id*/
@@ -118,7 +118,7 @@ jQuery(document).ready(function ($) {
 
         $(data.hits.hits).each( function() {
 
-          $('.SearchTownDrop#SearchTownDrop' + InputId).append('<span id="SearchProposition' + InputId + '" class="SearchProposition">' + this._source.nom + '</span>');
+          $('.SearchTownDrop#SearchTownDrop' + InputId).append('<span id="SearchProposition' + InputId + '" class="SearchProposition ' + this._source.id + '">' + this._source.nom + '</span>');
 
         });
 
@@ -154,27 +154,50 @@ jQuery(document).ready(function ($) {
 
 });
 
-$('.SearchTownDrop').on('click','.SearchProposition', function() {
+//if a saerch proposition is clicked
+$('.SearchTownDrop').on('click','.SearchProposition', function() {//important to use on(click) because the search proposition are dynamicly added to the page
 
   var InputId = this.id.slice(17);
 
+  var classList = $(this).attr('class').split(/\s+/);
+
+  var TownId =  classList[1];
+
+  //add the name of the town to the value of the input
   $(".SearchTownInput#SearchTownInput" + InputId).val( $(this).text().trim() );
+  $("#SearchTownId" + InputId).text(TownId);
 
   $('.SearchTownDrop#SearchTownDrop' + InputId).hide("fast");
   $('.SearchTownDrop#SearchTownDrop' + InputId).empty();
 
 });
 
+//if the search input lose the focus
 $('.SearchTownInput').on('focusout',function(e){
 
-  if($('.SearchProposition' + ':hover').length) {
+  if($('.SearchProposition' + ':hover').length) {//if the mouse is hover a search result: dont hide
         return;
   }
-  
+
  $('.SearchTownDrop#SearchTownDrop' + this.id.slice(15)).hide("fast");
 
 
 });
+
+//When the search button is clicked
+$('#SearchButton').click(function() {
+
+
+  if ($("#SearchTownIdDepart").text() && $("#SearchTownIdArrivee").text() && $('#SearchDate').val() != '') {
+    window.location = "http://localhost/Covoiturage/pages/SearchResult.php?depart=" + $("#SearchTownIdDepart").text() +"&arrivee=" + $("#SearchTownIdArrivee").text() + "&date=" + $('#SearchDate').val();
+  }
+
+
+
+});
+
+
+
 
 
 

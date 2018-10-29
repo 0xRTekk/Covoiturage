@@ -52,28 +52,23 @@ else {echo $_SESSION['WebsiteName'];} ?></title>
         <li class="nav-item active">
           <a class="nav-link" href="../pages/JourneyCard.php"> Page <span class="sr-only">Page</span></a>
         </li>
+
         <li class="nav-item active">
           <input type="text" class="form-control SearchTownInput" placeholder="Départ" id="SearchTownInputDepart">
+          <span id="SearchTownIdDepart" class="SearchTownId" hidden></span>
           <div  class="SearchTownDrop" id="SearchTownDropDepart">
           </div>
         </li>
         <li class="nav-item active">
           <input type="text" class="form-control SearchTownInput" placeholder="Arrivée" id="SearchTownInputArrivee">
+          <span id="SearchTownIdArrivee" class="SearchTownId" hidden></span>
           <div  class="SearchTownDrop" id="SearchTownDropArrivee">
           </div>
         </li>
         <li class="nav-item active">
-          <input type="text" class="form-control" class="datepicker">
+          <input type="date" class="form-control" id="SearchDate">
         </li>
-        <li class="nav-item active">
-          <div class="input-group-append">
-            <button class="btn btn-circle" type="button">
-              <svg class="IconStyle" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
-                <path d="M0 0v2h7v-2h-7zm0 3v4.91c0 .05.04.09.09.09h6.81c.05 0 .09-.04.09-.09v-4.91h-7zm1 1h1v1h-1v-1zm2 0h1v1h-1v-1zm2 0h1v1h-1v-1zm-4 2h1v1h-1v-1zm2 0h1v1h-1v-1z" />
-              </svg>
-            </button>
-          </div>
-        </li>
+
 
         <li class="nav-item active">
           <button class="btn btn-circle" id="SearchButton">
