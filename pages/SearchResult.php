@@ -5,14 +5,25 @@ include ('../include/navbar.php');// Include the navbar
 include ('../Database/ConnectDatabase.php');
 ?>
 
-<?php/*IF the search have the id for the two town from the url*/
+<?php /*IF the search have the id for the two town from the url*/
   if (isset($_GET['depart']) && isset($_GET['arrivee']) && isset($_GET['date']))
   {
+
     $SearchDepartID = $_GET['depart'];
     $SearchArriveeID = $_GET['arrivee'];
     $SearchDate = $_GET['date'];
 
-    $SearchResult = "SELECT * FROM trajet WHERE depart_ville = $SearchDepartID AND arrivee_ville = $SearchArriveeID AND $SearchDate BETWEEN date_debut_periode AND date_fin_periode";
+    //Date validation
+    $DateTable = explode("-", $SearchDate);
+
+    if( count($DateTable) == 3 )
+    {      
+      if (checkdate($DateTable[1], $DateTable[2], $DateTable[0])) {
+        $SearchResult = "SELECT * FROM trajet WHERE depart_ville = $SearchDepartID AND arrivee_ville = $SearchArriveeID AND $SearchDate BETWEEN date_debut_periode AND date_fin_periode";
+      }
+    }
+
+
 
   }
 ?>
